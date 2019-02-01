@@ -116,7 +116,10 @@ def render(**kwargs):  # type: None
             (list((metadata or {}).items()) + list(os.environ.items()) +
              list(options.items()) + list(options.get('options', {}).items()))
         })
-    print(output)
+    if options.output:
+        open(options.output, 'w').write(output)
+    else:
+        print(output)
     return
 
 
