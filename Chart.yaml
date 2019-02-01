@@ -1,0 +1,4 @@
+apiVersion: v1
+description: "A simple template utility with jinja2 syntax to use on Command-Line."
+name: umuus_jinja2_cli
+version: 0.1
